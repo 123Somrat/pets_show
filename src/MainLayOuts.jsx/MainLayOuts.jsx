@@ -4,7 +4,7 @@ import NavBar from '../Components/NavBar'
 
 export default function MainLayOuts() {
   return (
-    <div className='max-w-6xl mx-auto'>
+    <div className='max-w-6xl mx-auto m-4'>
          <NavBar/>
          <Outlet/> 
     </div>
