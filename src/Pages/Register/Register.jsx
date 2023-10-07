@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { AuthContext } from '../../AuthContextData/AuthContextData';
-
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Register() {
  const {CreateUser}= useContext(AuthContext)
@@ -10,9 +10,9 @@ export default function Register() {
     let  name = form.get("name");
     let email = form.get("email");
     let password =  form.get("password");
-    
+
      CreateUser(name,email,password)
-     .then(user=>console.log(user))
+     .then(()=>toast.success("user Created Successfully"))
      .catch(error=>console.log(error.message))
       e.preventDefault()
  }
@@ -51,6 +51,7 @@ export default function Register() {
         </form>
       </div>
     </div>
+    <Toaster/>
   </div>
   )
 }
