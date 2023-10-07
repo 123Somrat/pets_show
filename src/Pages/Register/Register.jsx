@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../AuthContextData/AuthContextData';
+
 
 export default function Register() {
-
+ const {CreateUser}= useContext(AuthContext)
 
  const handleSubmit = (e)=>{
     let form = new FormData(e.currentTarget)
     let  name = form.get("name");
     let email = form.get("email");
     let password =  form.get("password");
-    console.log(name,email,password)
+    
+     CreateUser(name,email,password)
+     .then(user=>console.log(user))
+     .catch(error=>console.log(error.message))
       e.preventDefault()
  }
 
