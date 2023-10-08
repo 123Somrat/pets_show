@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "eventName": "Dog Show",
+      "eventDetails": "An exhibition of various dog breeds and their talents.",
+      "eventPlace": "Central Park, New York",
+      "eventPrice": 20.99,
+      "eventRegStartDate": "2023-11-01",
+      "eventRegEndDate": "2023-11-15",
+      "eventImage": "https://example.com/dog-show-image.jpg"
+    },
+    {
+      "id": 2,
+      "eventName": "Cat Adoption Fair",
+      "eventDetails": "Find your perfect feline companion and give them a forever home.",
+      "eventPlace": "Local Community Center",
+      "eventPrice": 0,
+      "eventRegStartDate": "2023-10-15",
+      "eventRegEndDate": "2023-11-30",
+      "eventImage": "https://example.com/cat-adoption-image.jpg"
+    },
+    {
+      "id": 3,
+      "eventName": "Pet Costume Contest",
+      "eventDetails": "Dress up your pets and compete for prizes in various categories.",
+      "eventPlace": "City Plaza, San Francisco",
+      "eventPrice": 5.99,
+      "eventRegStartDate": "2023-10-20",
+      "eventRegEndDate": "2023-10-30",
+      "eventImage": "https://example.com/pet-costume-image.jpg"
+    },
+    {
+      "id": 4,
+      "eventName": "Exotic Pet Expo",
+      "eventDetails": "Explore a world of unique and exotic pets for sale or adoption.",
+      "eventPlace": "Exhibition Center, Miami",
+      "eventPrice": 12.5,
+      "eventRegStartDate": "2023-11-05",
+      "eventRegEndDate": "2023-11-20",
+      "eventImage": "https://example.com/exotic-pet-expo-image.jpg"
+    },
+    {
+      "id": 5,
+      "eventName": "Bird Watching Tour",
+      "eventDetails": "Guided bird-watching expedition in the scenic countryside.",
+      "eventPlace": "Hiking Trails, Colorado",
+      "eventPrice": 8.99,
+      "eventRegStartDate": "2023-10-25",
+      "eventRegEndDate": "2023-11-05",
+      "eventImage": "https://example.com/bird-watching-image.jpg"
+    },
+    {
+      "id": 6,
+      "eventName": "Rabbit Agility Challenge",
+      "eventDetails": "Watch adorable bunnies showcase their agility skills.",
+      "eventPlace": "Fairgrounds, Chicago",
+      "eventPrice": 7.5,
+      "eventRegStartDate": "2023-10-28",
+      "eventRegEndDate": "2023-11-10",
+      "eventImage": "https://example.com/rabbit-agility-image.jpg"
+    },
+    {
+      "id": 7,
+      "eventName": "Aquarium Expo",
+      "eventDetails": "Discover fascinating underwater worlds and aquatic creatures.",
+      "eventPlace": "Marine Science Center, Seattle",
+      "eventPrice": 15.0,
+      "eventRegStartDate": "2023-11-10",
+      "eventRegEndDate": "2023-11-30",
+      "eventImage": "https://example.com/aquarium-expo-image.jpg"
+    },
+    {
+      "id": 8,
+      "eventName": "Horseback Riding Adventure",
+      "eventDetails": "Enjoy a scenic ride through the countryside on horseback.",
+      "eventPlace": "Ranch, Texas",
+      "eventPrice": 25.0,
+      "eventRegStartDate": "2023-10-30",
+      "eventRegEndDate": "2023-11-10",
+      "eventImage": "https://example.com/horseback-riding-image.jpg"
+    }
+  ]
+  

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import   "../index.css"
 
 
@@ -39,7 +39,7 @@ export default function NavBar() {
               </li>
             </ul>
           </div>
-          <a className="normal-case text-xl">daisyUI</a>
+          <Link to="/"className="normal-case text-xl">Pets Show</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -55,7 +55,7 @@ export default function NavBar() {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Login</a>
+          <Link to="/login" className="btn">Login</Link>
         </div>
       </div>
     </div>
