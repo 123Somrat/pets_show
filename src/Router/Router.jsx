@@ -10,6 +10,7 @@ import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import Voulentiers from "../Pages/Voulentiers/Voulentiers";
 import Donation from "../Pages/Donation/Donation";
 import Contact from "../Pages/Contact/Contact";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
         {
           path:"/contact",
           element : <Contact/>
+        },
+        {
+          path:"/*",
+          element:<ErrorPage/>
         }
 
       ]
