@@ -7,6 +7,9 @@ import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import Events from "../Components/Events/Events";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
+import Voulentiers from "../Pages/Voulentiers/Voulentiers";
+import Donation from "../Pages/Donation/Donation";
+import Contact from "../Pages/Contact/Contact";
 
 
 
@@ -33,6 +36,18 @@ const router = createBrowserRouter([
           path:"/viewDetails/:id",
           element:<ViewDetails/>,
           loader:()=>fetch("../../public/resources.json")
+        },
+        {
+           path:"/voulentier",
+           element : <Voulentiers/>
+        },
+        {
+          path:"/donation",
+          element :<Donation/>
+        },
+        {
+          path:"/contact",
+          element : <Contact/>
         }
 
       ]

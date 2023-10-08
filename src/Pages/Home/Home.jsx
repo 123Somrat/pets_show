@@ -2,6 +2,7 @@ import {useLoaderData}from 'react-router-dom'
 import Banner from '../../Components/Banner/Banner'
 import Events from '../../Components/Events/Events'
 import AdoptedPets from '../../Components/AdoptedPets/AdoptedPets';
+import Footer from '../../Components/Footer/Footer';
 
 export default function Home() {
   const events = useLoaderData();
@@ -17,6 +18,9 @@ export default function Home() {
         </div>
          <div className="max-w-6xl max-auto p-4">
            <AdoptedPets />
+         </div>
+         <div className='max-w-6xl mx-auto'>
+            <Footer/>
          </div>
     </div>
   )

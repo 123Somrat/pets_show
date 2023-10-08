@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import   "../../index.css"
-
+import icon from "../../assets/Images/pets-3715733_640.ico"
 
 export default function NavBar() {
   return (
@@ -31,8 +31,8 @@ export default function NavBar() {
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li>
-                <NavLink to="/events">Become a Voulentier</NavLink>
+              <li >
+                <NavLink to="/voulentier">Become a Voulentier</NavLink>
               </li>
               <li>
                 <NavLink to="/register">Donation</NavLink>
@@ -49,16 +49,16 @@ export default function NavBar() {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
+            <li className="mr-2">
               <NavLink to="/">Home</NavLink>
             </li>
-            <li>
-                <NavLink to="/voulintier">Become a Voulentier</NavLink>
+            <li className="mr-2">
+                <NavLink to="/voulentier">Become a Voulentier</NavLink>
               </li>
-              <li>
+              <li className="mr-2">
                 <NavLink to="/donation">Donation</NavLink>
               </li>
-              <li>
+              <li className="mr-2">
                 <NavLink to="/contact">Contact</NavLink>
               </li>
             <li>
