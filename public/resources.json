@@ -7,17 +7,17 @@
       "eventPrice": 20.99,
       "eventRegStartDate": "2023-11-01",
       "eventRegEndDate": "2023-11-15",
-      "eventImage": "https://example.com/dog-show-image.jpg"
+      "eventImage": "https://media.istockphoto.com/id/1239645799/vector/dogs-on-winner-pedestal-with-award-ribbons-at-dog-show-dachshund-poodle-dalmatian.jpg?s=612x612&w=0&k=20&c=fHWyzJbSHW8PigL9OgKttUFa6gIFzl7jVcKBzU6j7f8="
     },
     {
       "id": 2,
-      "eventName": "Cat Adoption Fair",
+      "eventName": "Pets Adoption Fair",
       "eventDetails": "Find your perfect feline companion and give them a forever home.",
       "eventPlace": "Local Community Center",
       "eventPrice": 0,
       "eventRegStartDate": "2023-10-15",
       "eventRegEndDate": "2023-11-30",
-      "eventImage": "https://example.com/cat-adoption-image.jpg"
+      "eventImage": "https://www.istockphoto.com/de/vektor/adoptieren-sie-ein-haustier-aus-einem-tierheim-in-form-von-katzen-oder-hunden-um-es-gm1447803908-485514290?phrase=pet%20adoption%20fair&searchscope=image%2Cfilm"
     },
     {
       "id": 3,
