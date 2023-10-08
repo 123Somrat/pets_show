@@ -18,7 +18,7 @@ export default function UpComeingEvent({ PetsEvent}) {
               {eventDetails}
             </p>
           </div>
-          <Link to={`/viewDetails/:${id}`}><button
+          <Link to={`/viewDetails/${id}`}><button
             type="button"
             className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:bg-gray-500 dark:text-gray-900"
           >
