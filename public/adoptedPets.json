@@ -1,0 +1,43 @@
+[
+    {
+      "img": "https://static.foxbusiness.com/foxbusiness.com/content/uploads/2022/04/iStock-1324099927.jpg",
+      "name": "Fluffy",
+      "age": 3
+    },
+    {
+      "img": "https://evoke.ie/wp-content/uploads/2022/07/shutterstock_1290320698.jpg?w=900",
+      "name": "Buddy",
+      "age": 5
+    },
+    {
+      "img": "https://images.pexels.com/photos/977935/pexels-photo-977935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Whiskers",
+      "age": 2
+    },
+    {
+      "img": "https://images.pexels.com/photos/982300/pexels-photo-982300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Max",
+      "age": 4
+    },
+    {
+      "img": "https://www.mercurynews.com/wp-content/uploads/2018/08/Pembroke-Welsh-corgi.jpg?w=620",
+      "name": "Luna",
+      "age": 1
+    },
+    {
+      "img": "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/05/07/203831.jpg",
+      "name": "Oscar",
+      "age": 6
+    },
+    {
+      "img": "https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg",
+      "name": "Molly",
+      "age": 2
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHA7bn5gRM8ZuxmY6NjHV3Mdu8K2o3BvkflSA04zomsqgPTDu4Xi8asBlMMw2p7GorHwY&usqp=CAU",
+      "name": "Charlie",
+      "age": 7
+    }
+  ]
+  

@@ -18,7 +18,8 @@ const router = createBrowserRouter([
         {
              path:"/",
              element:<Home/>,
-             loader : ()=>fetch("../../public/resources.json")
+             loader : ()=>fetch("../../public/resources.json"),
+            
         },
         {
            path:"/register",

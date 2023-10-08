@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom"
 
 export default function UpComeingEvent({ PetsEvent}) {
-  console.log( PetsEvent);
+ 
   const {id,eventName,eventImage,eventDetails}= PetsEvent;
   return (
     <div>
