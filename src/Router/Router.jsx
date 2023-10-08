@@ -5,6 +5,7 @@ import MainLayOuts from "../MainLayouts.jsx/MainLayOuts";
 import Home from "../Pages/Home/Home";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
+import Events from "../Components/Events/Events";
 
 
 
@@ -25,7 +26,8 @@ const router = createBrowserRouter([
         {
              path:"/login",
              element:<Login/>
-        }
+        },
+        
 
       ]
     },
