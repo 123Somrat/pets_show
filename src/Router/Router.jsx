@@ -30,7 +30,8 @@ const router = createBrowserRouter([
         },
         {
           path:"/viewDetails/:id",
-          element:<ViewDetails/>
+          element:<ViewDetails/>,
+          loader:()=>fetch("../../public/resources.json")
         }
 
       ]

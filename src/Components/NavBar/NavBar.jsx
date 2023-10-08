@@ -32,10 +32,16 @@ export default function NavBar() {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/events">Events</NavLink>
+                <NavLink to="/events">Become a Voulentier</NavLink>
               </li>
               <li>
-                <NavLink to="/register">Registe </NavLink>
+                <NavLink to="/register">Donation</NavLink>
+              </li>
+              <li>
+                <NavLink to="/register">Contact</NavLink>
+              </li>
+              <li>
+                <NavLink to="/register">Register </NavLink>
               </li>
             </ul>
           </div>
@@ -47,8 +53,14 @@ export default function NavBar() {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/events">Events </NavLink>
-            </li>
+                <NavLink to="/voulintier">Become a Voulentier</NavLink>
+              </li>
+              <li>
+                <NavLink to="/donation">Donation</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact">Contact</NavLink>
+              </li>
             <li>
               <NavLink to="/register">Register</NavLink>
             </li>
