@@ -46,8 +46,8 @@ export default function Register() {
       e.target.email.value=""
       e.target.password.value=""
 
-      return toast.success("user Created Successfully");
-      //navigate("/login")
+    toast.success("user Created Successfully");
+      return navigate("/login")
       
      }
      

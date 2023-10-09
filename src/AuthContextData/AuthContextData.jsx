@@ -10,11 +10,11 @@ import {
 import auth from "../FireBaseConfig/FireBaseConfig";
 import toast, { Toaster } from "react-hot-toast";
 import { Navigate, useNavigate } from "react-router-dom";
-
 export const AuthContext = createContext();
 
 export default function AuthContextData({ children }) {
   const [User, setUser] = useState(null);
+  const [loading,setLoading] = useState(true)
   // create user useing firebase
   const CreateUser = (name, email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -23,6 +23,7 @@ export default function AuthContextData({ children }) {
   // Login user useing Firebase
 
   const LoginUser = (email, password) => {
+      setLoading(true)
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -32,6 +33,7 @@ export default function AuthContextData({ children }) {
       // set login user in state for useing in AuthContext
       if (user) {
         setUser(user);
+        setLoading(false)
       } else {
         console.log("sign out successfull");
       }
@@ -59,6 +61,7 @@ export default function AuthContextData({ children }) {
   
   // Login user with goggle
   const LoginWithGoggle = ()=>{
+     setLoading(true)
     const provider = new GoogleAuthProvider();
         return  signInWithPopup(auth, provider)
          
@@ -69,7 +72,8 @@ export default function AuthContextData({ children }) {
     LoginUser,
     User,
     SignOut,
-    LoginWithGoggle
+    LoginWithGoggle,
+    loading
   };
   return (
     <div>

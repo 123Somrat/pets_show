@@ -42,7 +42,7 @@ export default function Login() {
         e.target.password.value=""
 
         // after successfully login then navigate to home page
-        user ? navigate(`${location.state}`) : "/" 
+        location.state ? navigate(`${location.state}`) : navigate("/")
       })
       .catch((error) =>{
         e.target.email.value="";
