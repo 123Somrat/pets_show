@@ -59,15 +59,15 @@ export default function Login() {
 
   // Login with Google
 
-   const LoginUserWithGoggle = (e)=>{
-        LoginWithGoggle()
-        .then(user=>{
-          toast.success("Login Successfully")
-       })
-       .catch(error=>{
-           toast.error(error.message)
-       })
-   }
+  const LoginUserWithGoggle = (e)=>{
+    LoginWithGoggle()
+    .then(user=>{
+     return toast.success("Login Successfully")
+   })
+   .catch(error=>{
+      return  toast.error(error.message)
+   })
+}
 
   return (
     <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100 my-20">
