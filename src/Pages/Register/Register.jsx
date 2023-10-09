@@ -9,7 +9,7 @@ export default function Register() {
   const [emailError,setEmailError] = useState("");
   const [passwordError,setPasswordError] = useState("")
  const handleSubmit = (e)=>{
-      
+  // preventing by default  form submitting behaviour   
   e.preventDefault()
     
   // empty the error 
@@ -30,7 +30,7 @@ export default function Register() {
         return setNameError("name mustbe 6 cherecter long and not empty")
       }
 
-      if(email==="" || email.test(regex)){
+      if(email==="" || email.match(regex)){
         return setEmailError("email can not be empty or email must have letter and special cherecter")
       }
       
@@ -94,7 +94,7 @@ export default function Register() {
           <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-400 dark:text-gray-900">Sign in</button>
         </div>
         <p className="px-6 text-sm text-center dark:text-gray-400">Already have an account?
-          <a rel="noopener noreferrer" href="/login" className="hover:underline dark:text-violet-400">Login</a>.
+          <Link rel="noopener noreferrer" to="/login" className="hover:underline dark:text-violet-400">Login</Link>.
         </p>
       </div>
     </form>

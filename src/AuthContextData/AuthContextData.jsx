@@ -9,7 +9,6 @@ export default function AuthContextData({children}) {
 
 // create user useing firebase
 const CreateUser = (name,email,password)=>{
-    console.log(name,email,password)
     return createUserWithEmailAndPassword(auth, email, password)
 }
 
