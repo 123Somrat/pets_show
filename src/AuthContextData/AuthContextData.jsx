@@ -18,14 +18,15 @@ export default function AuthContextData({ children }) {
   const [userLogedIn,setUserLogedin] = useState(false)
   // create user useing firebase
   const CreateUser = (name, email, password) => {
+    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  console.log(userLogedIn)
+ 
   // Login user useing Firebase
-console.log(User)
+
   const LoginUser = (email, password) => {
-      setLoading(true)
+    setLoading(true)
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -35,6 +36,7 @@ console.log(User)
       // set login user in state for useing in AuthContext
       if (user) {
         setUser(user);
+        console.log(user)
         setLoading(false)
       } else {
         console.log("sign out successfull");
@@ -63,7 +65,7 @@ console.log(User)
   
   // Login user with goggle
   const LoginWithGoggle = ()=>{
-     setLoading(true)
+    setLoading(true)
     const provider = new GoogleAuthProvider();
         return  signInWithPopup(auth, provider)
          
@@ -76,8 +78,8 @@ console.log(User)
     SignOut,
     LoginWithGoggle,
     loading,
-    setUserLogedin,
-    userLogedIn
+    //setUserLogedin,
+   // userLogedIn
   };
   return (
     <div>

@@ -45,9 +45,9 @@ export default function Login() {
 
         e.target.email.value="";
         e.target.password.value=""
-         setUserLogedin(true)
+        
         // after successfully login then navigate to home page
-        location.state ? navigate(`${location.state}`) : navigate("/")
+       return location.state ? navigate(`${location.state}`) : navigate("/")
       })
       .catch((error) =>{
         e.target.email.value="";

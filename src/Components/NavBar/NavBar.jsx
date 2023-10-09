@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthContextData/AuthContextData";
 
 export default function NavBar() {
-   const {User,SignOut,userLogedIn} = useContext(AuthContext)
+   const {User,SignOut} = useContext(AuthContext)
      console.log(User)
 
   return (
@@ -73,14 +73,14 @@ export default function NavBar() {
         </div>
         <div className="navbar-end  h-22">
           <div className="flex flex-col justify-center items-center">
-          {User?.photoURL && userLogedIn &&
+          {User?.photoURL && 
           <img alt="" className="w-12 h-12 rounded-full ri ri dark:bg-gray-500 ri ri" src={""
           } />
           }
-          {User?.email && userLogedIn && <span>{User.email}</span>}
+          {User?.email && <span>{User.email}</span>}
           </div>
 
-         {User?.email && userLogedIn ?
+         {User?.email ?
           <Link onClick={SignOut}className="btn ml-4">SignOut</Link>
       
          : <Link to="/login" className="btn">Login</Link>} 
