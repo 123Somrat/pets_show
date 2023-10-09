@@ -28,7 +28,7 @@ export default function AdoptedPets() {
         <p className="text-gray-700 p-2">A totally new experience for you and your little friend.</p>
         <p className="text-gray-700 p-2">friend.</p>
       </div>
-      <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 m-12">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-12">
              {
                 adoptedPetss.map((pet,id)=><AdoptedPet 
                  key ={id}
