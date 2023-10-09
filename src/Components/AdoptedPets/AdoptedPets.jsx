@@ -19,7 +19,7 @@ export default function AdoptedPets() {
       .then((res) => setAdoptedPetss(res))
       .catch((error) => console.log(error.message));
   }, []);
- console.log(adoptedPetss)
+
   return (
     <div >
       <div className="text-center">
