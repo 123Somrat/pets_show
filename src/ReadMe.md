@@ -48,3 +48,9 @@ console.log(count);
 
 
 ### Ans : Ans is C,because its first iteration when if condition check the number its saw the first number is 0 so in javaScript we know that in javaScript 0 is falsy value thats why its not increment the count value and next iteration when its got truthy value and its increment the count value
+
+
+
+# GitHub Link : https://github.com/123Somrat/pets_show
+
+# Live Demo Link : https://pets-show-8740f.web.app
