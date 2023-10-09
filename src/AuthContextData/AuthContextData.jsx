@@ -14,14 +14,16 @@ export const AuthContext = createContext();
 
 export default function AuthContextData({ children }) {
   const [User, setUser] = useState(null);
-  const [loading,setLoading] = useState(true)
+  const [loading,setLoading] = useState(true);
+  const [userLogedIn,setUserLogedin] = useState(false)
   // create user useing firebase
   const CreateUser = (name, email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  console.log(userLogedIn)
   // Login user useing Firebase
-
+console.log(User)
   const LoginUser = (email, password) => {
       setLoading(true)
     return signInWithEmailAndPassword(auth, email, password);
@@ -73,7 +75,9 @@ export default function AuthContextData({ children }) {
     User,
     SignOut,
     LoginWithGoggle,
-    loading
+    loading,
+    setUserLogedin,
+    userLogedIn
   };
   return (
     <div>

@@ -3,13 +3,18 @@ import toast, { Toaster } from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthContextData/AuthContextData";
 export default function Login() {
-  const { LoginUser,User,LoginWithGoggle} = useContext(AuthContext);
+
+
+  const { LoginUser,setUserLogedin,LoginWithGoggle} = useContext(AuthContext);
   const navigate = useNavigate();
   const [data,setdata] = useState({})
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const location = useLocation();
-  console.log(location.state)
+ 
+
+
+
   const handleSubmit = (e) => {
     // preventing by default  form submitting behaviour
     e.preventDefault();
@@ -40,7 +45,7 @@ export default function Login() {
 
         e.target.email.value="";
         e.target.password.value=""
-
+         setUserLogedin(true)
         // after successfully login then navigate to home page
         location.state ? navigate(`${location.state}`) : navigate("/")
       })
