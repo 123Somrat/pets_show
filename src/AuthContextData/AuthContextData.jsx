@@ -20,14 +20,20 @@ const LoginUser = (email,password)=>{
 
 // observe user status useing FireBase onAuthStateChanged utility method
      useEffect(()=>{
-        onAuthStateChanged(auth, (user) => {
+       const unSubscribe = onAuthStateChanged(auth, (user) => {
             // set login user in state for useing in AuthContext
             if (user) {
                setUser(user)
             } else {
-              
+               console.log("sign out successfull")
             }
           });
+
+          // clear the listener
+          return ()=>{
+             unSubscribe()
+
+          }
 
      },[])
 
@@ -35,7 +41,8 @@ const LoginUser = (email,password)=>{
 
     const authData = {
         CreateUser,
-        LoginUser
+        LoginUser,
+        User
     };
 return(
 

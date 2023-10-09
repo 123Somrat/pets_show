@@ -1,8 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import   "../../index.css"
 import icon from "../../assets/Images/pets-3715733_640.ico"
+import { useContext } from "react";
+import { AuthContext } from "../../AuthContextData/AuthContextData";
 
 export default function NavBar() {
+   const {User} = useContext(AuthContext)
+
+
   return (
     <div>
       <div className="navbar">
@@ -67,7 +72,7 @@ export default function NavBar() {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="/login" className="btn">Login</Link>
+         {User ? <Link className="btn">SignOut</Link>: <Link to="/login" className="btn">Login</Link>} 
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthContextData/AuthContextData";
 export default function Login() {
-  const { LoginUser } = useContext(AuthContext);
+  const { LoginUser,User} = useContext(AuthContext);
   const navigate = useNavigate();
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -32,7 +32,7 @@ export default function Login() {
     // useing Loginuser fuction from AuthContect
     LoginUser(email, password)
       .then((user) => {
-        console.log(user)
+        
         toast.success("Login succesfully");
 
 
@@ -49,7 +49,7 @@ export default function Login() {
 
       });
 
-   
+console.log("i am from login",User)   
   };
   return (
     <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100 my-20">
@@ -86,8 +86,8 @@ export default function Login() {
             </a>
           </div>
         </div>
-        <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400">
-          Sign in
+       <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400">
+         Log in
         </button>
       </form>
       <div className="flex items-center pt-4 space-x-1">

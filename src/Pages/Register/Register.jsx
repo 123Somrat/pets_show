@@ -91,7 +91,7 @@ export default function Register() {
       {passwordError && <p className='text-red-700'>{passwordError}</p>}
       <div className="space-y-2">
         <div>
-          <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-400 dark:text-gray-900">Sign in</button>
+          <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-400 dark:text-gray-900">Register</button>
         </div>
         <p className="px-6 text-sm text-center dark:text-gray-400">Already have an account?
           <Link rel="noopener noreferrer" to="/login" className="hover:underline dark:text-violet-400">Login</Link>.
