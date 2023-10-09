@@ -50,6 +50,7 @@ export default function Register() {
       //navigate("/login")
       
      }
+     
   )
      .catch(error=>{
       // clear the form field

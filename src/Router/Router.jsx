@@ -11,6 +11,7 @@ import Voulentiers from "../Pages/Voulentiers/Voulentiers";
 import Donation from "../Pages/Donation/Donation";
 import Contact from "../Pages/Contact/Contact";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 
@@ -35,16 +36,16 @@ const router = createBrowserRouter([
         },
         {
           path:"/viewDetails/:id",
-          element:<ViewDetails/>,
+          element:<PrivateRoute><ViewDetails/>,</PrivateRoute>,
           loader:()=>fetch("../../public/resources.json")
         },
         {
            path:"/voulentier",
-           element : <Voulentiers/>
+           element :<PrivateRoute><Voulentiers/></PrivateRoute>
         },
         {
           path:"/donation",
-          element :<Donation/>
+          element :<PrivateRoute><Donation/></PrivateRoute>
         },
         {
           path:"/contact",

@@ -1,13 +1,15 @@
 import { useContext,useState} from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthContextData/AuthContextData";
 export default function Login() {
-  const { LoginUser,User} = useContext(AuthContext);
+  const { LoginUser,User,LoginWithGoggle} = useContext(AuthContext);
   const navigate = useNavigate();
+  const [data,setdata] = useState({})
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-
+  const location = useLocation();
+  console.log(location.state)
   const handleSubmit = (e) => {
     // preventing by default  form submitting behaviour
     e.preventDefault();
@@ -28,7 +30,7 @@ export default function Login() {
     if (password === "") {
       return setPasswordError("Credential does'nt matches ");
     }
-
+ 
     // useing Loginuser fuction from AuthContect
     LoginUser(email, password)
       .then((user) => {
@@ -40,7 +42,7 @@ export default function Login() {
         e.target.password.value=""
 
         // after successfully login then navigate to home page
-        navigate("/");
+        user ? navigate(`${location.state}`) : "/" 
       })
       .catch((error) =>{
         e.target.email.value="";
@@ -48,9 +50,20 @@ export default function Login() {
         return toast.error(error.message)
 
       });
+  }; 
 
-console.log("i am from login",User)   
-  };
+  // Login with Google
+
+   const LoginUserWithGoggle = (e)=>{
+        LoginWithGoggle()
+        .then(user=>{
+          toast.success("Login Successfully")
+       })
+       .catch(error=>{
+           toast.error(error.message)
+       })
+   }
+
   return (
     <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100 my-20">
       <h1 className="text-2xl font-bold text-center">Login</h1>
@@ -98,7 +111,7 @@ console.log("i am from login",User)
         <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
       </div>
       <div className="flex justify-center space-x-4">
-        <button aria-label="Log in with Google" className="p-3 rounded-sm">
+        <button aria-label="Log in with Google" className="p-3 rounded-sm" onClick={LoginUserWithGoggle}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"

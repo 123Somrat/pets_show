@@ -2,6 +2,8 @@ import { createContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
@@ -54,12 +56,20 @@ export default function AuthContextData({ children }) {
         return toast.error("SomeThing went Wrong");
       });
   };
+  
+  // Login user with goggle
+  const LoginWithGoggle = ()=>{
+    const provider = new GoogleAuthProvider();
+        return  signInWithPopup(auth, provider)
+         
+  }
 
   const authData = {
     CreateUser,
     LoginUser,
     User,
     SignOut,
+    LoginWithGoggle
   };
   return (
     <div>
