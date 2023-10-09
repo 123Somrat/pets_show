@@ -9,8 +9,9 @@ export default function PrivateRoute({children}) {
      return <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-400 mx-auto m-12"></div>
   }
    
-   if(User){
-    return children
+   if(!User){
+    return <Navigate to="/login" state={location.pathname}></Navigate>
+    
    }
-   return <Navigate to="/login" state={location.pathname}></Navigate>
+   return children
 }

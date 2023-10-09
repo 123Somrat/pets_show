@@ -3,6 +3,7 @@ import Banner from '../../Components/Banner/Banner'
 import Events from '../../Components/Events/Events'
 import AdoptedPets from '../../Components/AdoptedPets/AdoptedPets';
 import Footer from '../../Components/Footer/Footer';
+import PetsNews from '../../Components/PetsNews/PetsNewses';
 
 export default function Home() {
   const events = useLoaderData();
@@ -18,6 +19,9 @@ export default function Home() {
         </div>
          <div className="max-w-6xl max-auto p-4">
            <AdoptedPets />
+         </div>
+         <div className="max-w-6xl max-auto p-4">
+              <PetsNews/>
          </div>
          <div className='max-w-6xl mx-auto'>
             <Footer/>
