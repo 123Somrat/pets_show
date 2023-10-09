@@ -5,12 +5,12 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthContextData/AuthContextData";
 
 export default function NavBar() {
-   const {User} = useContext(AuthContext)
-
+   const {User,SignOut} = useContext(AuthContext)
+     console.log(User)
 
   return (
     <div>
-      <div className="navbar">
+      <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className=" lg:hidden">
@@ -71,8 +71,19 @@ export default function NavBar() {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-         {User ? <Link className="btn">SignOut</Link>: <Link to="/login" className="btn">Login</Link>} 
+        <div className="navbar-end  h-22">
+          <div className="flex flex-col justify-center items-center">
+          {User &&
+          <img alt="" className="w-12 h-12 rounded-full ri ri dark:bg-gray-500 ri ri" src={""
+          } />
+          }
+          <span>{User?.email}</span>
+          </div>
+
+         {User ?
+          <Link onClick={SignOut}className="btn ml-4">SignOut</Link>
+      
+         : <Link to="/login" className="btn">Login</Link>} 
         </div>
       </div>
     </div>

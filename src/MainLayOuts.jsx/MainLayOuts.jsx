@@ -6,7 +6,8 @@ import NavBar from '../Components/NavBar/NavBar'
 export default function MainLayOuts() {
   return (
     <div className='max-w-6xl mx-auto m-4'>
-         <NavBar/>
+  
+       <NavBar/>
          <Outlet/> 
     </div>
   )
