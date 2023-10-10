@@ -26,7 +26,7 @@ export default function AuthContextData({ children }) {
   // Login user useing Firebase
 
   const LoginUser = (email, password) => {
-    //setLoading(true)
+    setLoading(true)
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -65,7 +65,7 @@ export default function AuthContextData({ children }) {
   
   // Login user with goggle
   const LoginWithGoggle = ()=>{
-    //setLoading(true)
+    setLoading(true)
     const provider = new GoogleAuthProvider();
         return  signInWithPopup(auth, provider)
          

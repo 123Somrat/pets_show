@@ -40,17 +40,17 @@ export default function NavBar() {
                 <NavLink to="/voulentier">Become a Voulentier</NavLink>
               </li>
               <li>
-                <NavLink to="/register">Donation</NavLink>
+                <NavLink to="/donation">Donation</NavLink>
               </li>
               <li>
-                <NavLink to="/register">Contact</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
               </li>
               <li>
                 <NavLink to="/register">Register </NavLink>
               </li>
             </ul>
           </div>
-          <Link to="/"className="normal-case text-xl">Pets Show</Link>
+          <Link to="/"className="normal-case text-3xl">Whiskers</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
