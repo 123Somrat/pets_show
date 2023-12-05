@@ -5,7 +5,7 @@ export default function PetsNewses() {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    fetch("../../public/petNews.json")
+    fetch("petNews.json")
       .then((data) => data.json())
       .then((res) => setNews(res))
       .catch((error) => console.log(error.message));
