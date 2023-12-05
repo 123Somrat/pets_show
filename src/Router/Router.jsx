@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         {
              path:"/",
              element:<Home/>,
-             loader : ()=>fetch("../../public/resources.json"),
+             loader : ()=>fetch("resources.json"),
             
         },
         {
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         {
           path:"/viewDetails/:id",
           element:<PrivateRoute><ViewDetails/>,</PrivateRoute>,
-          loader:()=>fetch("../../public/resources.json")
+          loader:()=>fetch("resources.json")
         },
         {
            path:"/voulentier",

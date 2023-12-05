@@ -7,7 +7,7 @@ export default function Events({events}) {
          <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
              {
                  events?.map(petsEvent=><UpComeingEvent
-                    key = {petsEvent.id}
+                    key = {petsEvent?.id}
                     PetsEvent={petsEvent}
                  />
                 
